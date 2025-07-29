@@ -1,11 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
+import registerServiceWorker from './registerServiceWorker';
 
-class HolaMundo extends React.Component {
-    render() {
-        return <p>Hola Mundo</p>
-    }
-}
+import HolaMundo from './components/HolaMundo';
 
 
 render(<HolaMundo />, document.querySelector('#root'));
+
+registerServiceWorker();
