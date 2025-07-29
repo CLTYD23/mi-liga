@@ -5,6 +5,6 @@ import registerServiceWorker from './registerServiceWorker';
 import HolaMundo from './components/HolaMundo';
 
 
-render(<HolaMundo />, document.querySelector('#root'));
+render(<HolaMundo nombre="Sergio" edad="35" />, document.querySelector('#root'));
 
 registerServiceWorker();
