@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 // Estilos
 import './Liga.css';
@@ -20,8 +20,24 @@ import FotoManuel from './../../assets/fotos/manuel.png';
 import FotoJose from './../../assets/fotos/jose.png';
 import FotoPaco from './../../assets/fotos/paco.png';
 
+// Data
+import equiposJSON from '../../assets/data/equipos.json';
+
 
 class Liga extends Component {
+
+  state = {
+    equipos: []
+  }
+
+  componentDidMount() {
+    let equipos = { ...this.state.equipos };
+
+    equipos = equiposJSON;
+
+    this.setState({ equipos });
+  }
+
   render() {
     return (
       <div className="contenedor">
