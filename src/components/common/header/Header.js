@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
+// Material
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 
+// Estilos
 import './Header.css';
 
 class Header extends Component {
@@ -18,8 +20,12 @@ class Header extends Component {
 
                         </Typography>
 
-                        <Button color="inherit" >Equipos</Button>
-                        <Button color="inherit" >Calendarios</Button>
+                        <Button color="inherit" >
+                            <a href="/liga">Equipos</a>
+                        </Button>
+                        <Button color="inherit" >
+                            <a href="/calendario">Calendarios</a>
+                        </Button>
 
                     </Toolbar>
                 </AppBar>
