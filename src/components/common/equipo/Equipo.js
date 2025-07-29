@@ -10,14 +10,19 @@ import './Equipo.css';
 class Equipo extends Component {
 
   state = {
-    fav: { value: 'star1' }
+    fav: { value: 'star' }
   }
+
+  setFav() {
+    console.log('Favorito :D');
+  }
+
 
   render() {
     return (
       <div>
         <img className={"team-logo"} src={this.props.logo} alt={this.props.nombre} />
-        <Icon className={this.state.fav.value} >star_rate</Icon>
+        <Icon onClick={this.setFav.bind(this)} className={this.state.fav.value} >star_rate</Icon>
       </div>
     );
   }
