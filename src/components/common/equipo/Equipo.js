@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 // Estilos
 import './Equipo.css';
 
-
 class Equipo extends Component {
   render() {
     return (
