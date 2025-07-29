@@ -26,6 +26,12 @@ class Equipo extends Component {
     this.setState({ fav });
   }
 
+  componentDidUpdate() {
+    console.log(this.props)
+    console.log(this.state.fav)
+    localStorage.setItem(this.props.nombre, JSON.stringify(this.state.fav))
+  }
+
 
   render() {
     return (
