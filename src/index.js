@@ -1,11 +1,33 @@
 import React from 'react';
 import { render } from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
+
+// Material
+import Reboot from 'material-ui/Reboot';
+
+// Estilos
 import './index.css';
 
-import HolaMundo from './components/hola-mundo/HolaMundo';
+// Componentes
+import Header from './components/common/header/Header';
+import Router from "./Router";
 
 
-render(<HolaMundo nombre="Sergio" edad="35" tipo="descripcion" />, document.querySelector('#root'));
+// The CODE!
+const Root = () => {
+    return (
+        <div>
+            <Reboot />
+            <Header />
+            <div className="contenedor">
+                <Router />
+            </div>
+        </div>
+    )
+}
+
+
+
+render(<Root />, document.querySelector('#root'));
 
 registerServiceWorker();
